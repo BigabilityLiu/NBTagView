@@ -32,8 +32,6 @@ var tagTitleColor: UIColor = UIColor.black
 var tagBorderColor: UIColor = UIColor.black
 //样式，水平或者竖着
 var orientationType = NBTagViewOrientationType.horizontal
-//标签的高度
-var tagHeight: CGFloat! = 30
 ```
 ##Function
 ```swift
