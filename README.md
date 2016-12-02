@@ -3,19 +3,19 @@
 
 ##Useage
 ```swift
-    var tagView: NBTagView!
-    titles = ["唐  僧","孙悟空","🐖八戒","唐  僧","孙悟空","🐖八戒","唐  僧","孙悟空","🐖八戒","孙悟空","🐖八戒","唐  僧","孙悟空","🐖八戒"]
-    tagView = NBTagView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40), tags: titles, type: NBTagViewOrientationType.vertical)
-    self.view.addSubview(tagView)
+var tagView: NBTagView!
+titles = ["唐  僧","孙悟空","🐖八戒","唐  僧","孙悟空","🐖八戒","唐  僧","孙悟空","🐖八戒","孙悟空","🐖八戒","唐  僧","孙悟空","🐖八戒"]
+tagView = NBTagView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40), tags: titles, type:  NBTagViewOrientationType.vertical)
+self.view.addSubview(tagView)
 ```
 ###Useage in TableView
 ```swift 
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tagView
-    }
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tagView.frame.height
-    }
+override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    return tagView
+}
+override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return tagView.frame.height
+}
 ```
 
 ##Property
@@ -49,11 +49,10 @@ func setClickToDelete(_ toDelete: Bool,withAnimate: Bool)
 ```
 ##Protocol
 ```swift
-    func nbTagView(_ tagView: NBTagView,didClickedAtIndex: Int)
-    func nbTagView(_ tagView: NBTagView,didRemoveTagAtIndex: Int)
-    func nbTagView(_ tagView: NBTagView,didAddedTagAtIndex: Int)
-    func nbTagView(_ tagView: NBTagView,didAddedTags: [String])
-}
+func nbTagView(_ tagView: NBTagView,didClickedAtIndex: Int)
+func nbTagView(_ tagView: NBTagView,didRemoveTagAtIndex: Int)
+func nbTagView(_ tagView: NBTagView,didAddedTagAtIndex: Int)
+func nbTagView(_ tagView: NBTagView,didAddedTags: [String])
 ```
 ##Use Example
 ##Example 1
@@ -93,8 +92,8 @@ func setClickToDelete(_ toDelete: Bool,withAnimate: Bool)
 ```
 ##Example 2
 ```swift
-let nbView = NBTagView()
-nbView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: 80)
-nbView.addTags(["唐  僧","孙悟空","🐖八戒","沙和尚","唐  僧","孙悟空","🐖八戒","沙和尚"])
-self.view.addSubview(nbView)
+    let nbView = NBTagView()
+    nbView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: 80)
+    nbView.addTags(["唐  僧","孙悟空","🐖八戒","沙和尚","唐  僧","孙悟空","🐖八戒","沙和尚"])
+    self.view.addSubview(nbView)
 ```
